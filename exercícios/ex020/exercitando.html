@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando o uso de Pseudo-classes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        div {
+            width: 200px
+        }
+
+        h2 {
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+        }
+
+        div > p:hover {
+            background-color: lightblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu</h1>
+    <div>
+        <h2>Funcionário</h2>
+        <p><a href="pseudoclasse.html" target="_self" rel="next">Nome Completo</a></p>
+        <p><a href="pseudoclasse.html" target="_self" rel="next">CPF</a></p>
+        <p><a href="pseudoclasse.html" target="_self" rel="next">Cargo</a></p>
+    </div>
+    <div>
+        <h2>Cadastrar</h2>
+        <p><a href="hover.html" target="_blank" rel="next">Funcionário</a></p>
+        <p><a href="hover.html" target="_blank" rel="next">Empresa</a></p>
+    </div>
+</body>
+</html>

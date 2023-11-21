@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* h1 é um elemento box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            border: 10px solid darkslategray;
+
+            /*
+            A tag border pode simplificar seu código, desde que seja seguido exatamente a ordem abaixo:
+                - border-width: 10px;
+                - border-style: solid;
+                - border-color: darkslategray;
+            */
+
+            padding: 10px 10px 10px 10px;
+            
+            /*
+            A tag padding pode simplificar seu código, desde que seja seguido exatamente a ordem abaixo:
+                - padding-top: 10px;
+                - padding-right: 10px;
+                - padding-bottom: 10px;
+                - padding-left: 10px;
+            OBS: Caso as medidas sejam iguais, você pode simplificar ainda mais, colocando o valor apenas uma única vez.
+            Ex: padding: 10px; (serão 10px para todos os lados)
+            */
+
+            margin: 20px auto 40px auto;
+
+            /*
+            A tag margin pode simplificar seu código, desde que seja seguido exatamente a ordem abaixo:
+                - margin-top: 20px;
+                - margin-right: 20px;
+                - margin-bottom: 40px;
+                - margin-left: 20px;
+            OBS: Caso as medidas sejam iguais, você pode simplificar ainda mais, colocando o valor apenas uma única vez.
+            */
+
+            outline: 5px dashed salmon;
+
+            /*
+            A tag outline pode simplificar seu código, desde que seja seguido exatamente a ordem abaixo:
+                - outline-width: 5px;
+                - outline-style: dashed;
+                - outline-color: salmon;
+            */
+        }
+
+        a { /* a é um elemento inline-level */
+            border: 10px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        border: define a borda de uma caixa
+        padding: define o acolchoamento / preenchimento (espaço do texto para a borda interno)
+        margin: define o espaço externo de uma caixa (margem para outrar caixas / bordas)
+        outline: define uma borda fora do elemento (após a borda)
+    -->
+    <!--
+        Tipos de caixas:
+        box-level: a caixa pula para proxima linha e ocupa a largura total de seu navegador
+        inline-level: a caixa não pula para proxima linha e não ocupa a largura total do navegador (inline de mesma linhas), inclusive o próximo conteúdo também continua na mesma linha caso tenha espaço
+    -->
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de xaixa inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
