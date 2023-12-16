@@ -1,0 +1,55 @@
+/* SCREEN > 901 */
+@charset "UTF-8";
+
+@media screen and (min-width: 901px) {
+    html {
+        background-image: linear-gradient(to bottom, #F0F2F5 78%, white 22%);
+    }
+    
+    body {
+        max-width: 1000px;
+        margin: auto;
+        height: 100vh;
+    }
+    
+    header {
+        float: left;
+        width: calc(100% - 480px);
+        height: 720px;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    main {
+        float: right;
+        height: 720px;
+        padding-right: 40px;
+    }
+
+    footer {
+        background-color: white;
+        float: inline-end;
+        padding-top: 11px;
+    }
+
+    .abs-header {
+        text-align: left;
+        margin: 0;
+        margin-top: 166px;
+    }
+
+    .abs-main {
+        margin: 0;
+        margin-top: 130px;
+    }
+}
+
+@media screen and (min-width: 1076px) {
+    html {
+        background-image: linear-gradient(to bottom, #F0F2F5 78%, white 22%);
+    }
+    
+    .text-title {
+        font-size: 28px;
+    }
+}
