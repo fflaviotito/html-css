@@ -22,6 +22,7 @@ var combinacoes = [
 ]
 var placarX = document.getElementById('X')
 var placarO = document.getElementById('O')
+var indicador = document.getElementById('vez')
 
 // IDENTIFICA QUAL OPÇÃO (td) FOI SELECIONADA
 document.addEventListener("click", (event) => {
@@ -31,20 +32,27 @@ document.addEventListener("click", (event) => {
 })
 
 function jogar(n) { //SERÁ ACIONADA SEMPRE QUE ALGUÉM JOGAR
-    // IDENTIFICA DE QUEM É A VEZ DE JOGAR
-    if (vezX == vezO) {
-        var vez = jogador_X
-        vezX++
-    } else {
-        var vez = jogador_O
-        vezO++
-    }
-
-    // ADICIONA O SÍMBOLO (X / O) NA OPÇÃO SELECIONADA
+    //VERIFICA SE A OPÇÃO JÁ FOI ESCOLHIDA ANTERIORMENTE
     var opcao = document.getElementById(n)
-    opcao.textContent = vez
-    opcao.classList.add(vez)
-    vencedor(vez)
+    if (opcao.textContent == "X" || opcao.textContent == "O") {
+        alert('Opção já selecionada')
+    } else {
+        // IDENTIFICA DE QUEM É A VEZ DE JOGAR
+        if (vezX == vezO) {
+            var vez = jogador_X
+            vezX++
+            indicador.innerHTML = jogador_O
+        } else {
+            var vez = jogador_O
+            vezO++
+            indicador.innerHTML = jogador_X
+        }
+
+        // ADICIONA O SÍMBOLO (X / O) NA OPÇÃO SELECIONADA
+        opcao.textContent = vez
+        opcao.classList.add(vez)
+        vencedor(vez) 
+    }
 }
 
 function vencedor(vez) { //VERIFICA SE HOUVE ALGUM VENCEDOR NA RODADA
@@ -71,14 +79,15 @@ function vencedor(vez) { //VERIFICA SE HOUVE ALGUM VENCEDOR NA RODADA
     }
 }
 
-function reiniciar() {
+function reiniciar() { //REINICIAR OS PARAMETROS E O JOGO
+    vezX = 0
+    vezO = 0
+    indicador.innerHTML = jogador_X
     for (var c = 0; 0 < 9; c++) {
         var limparcel = document.getElementsByClassName('cel') [c]
         limparcel.classList.remove('X')
         limparcel.classList.remove('O')
         limparcel.textContent = ""
-        vezX = 0
-        vezO = 0
     }
     console.log('REINICIOU!')
 }
