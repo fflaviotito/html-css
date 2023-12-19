@@ -23,6 +23,7 @@ var combinacoes = [
 var placarX = document.getElementById('X')
 var placarO = document.getElementById('O')
 var indicador = document.getElementById('vez')
+var telaNot = document.getElementById('notificacao')
 
 // IDENTIFICA QUAL OPÇÃO (td) FOI SELECIONADA
 document.addEventListener("click", (event) => {
@@ -71,15 +72,32 @@ function vencedor(vez) { //VERIFICA SE HOUVE ALGUM VENCEDOR NA RODADA
             pontosO++
             placarO.innerHTML = pontosO
         }
-        alert(`O jogador "${vez}" ganhou!!`)
-        reiniciar()
+        fimPartida(vez)
     }  else if(vezX + vezO == 9) {
-        alert(`Empate!!`)
-        reiniciar()
+        fimPartida(vez)
     }
 }
 
+function fimPartida(vez) {
+    telaNot.style.display = "block"
+    var playerWin = document.getElementById('player-win')
+    if(vezX + vezO == 9) {
+        playerWin.innerHTML = `O jogo empatou!!`
+    } else {
+        playerWin.innerHTML = `O jogador "${vez}" ganhou!!`
+    }   
+}
+
+document.addEventListener("click", (button) => {
+    if (button.target.matches('#reload')) {
+        reiniciar()
+    } else if (button.target.matches('#quit')) {
+        sair()
+    }
+})
+
 function reiniciar() { //REINICIAR OS PARAMETROS E O JOGO
+    telaNot.style.display = "none"
     vezX = 0
     vezO = 0
     indicador.innerHTML = jogador_X
@@ -89,5 +107,4 @@ function reiniciar() { //REINICIAR OS PARAMETROS E O JOGO
         limparcel.classList.remove('O')
         limparcel.textContent = ""
     }
-    console.log('REINICIOU!')
 }
