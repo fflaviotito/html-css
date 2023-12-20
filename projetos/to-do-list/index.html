@@ -6,6 +6,8 @@
     <title>To-Do List</title>
     <!-- CSS do projeto -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Material Symbols da Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- JS do projeto -->
     <script src="js/script.js" defer></script>
 </head>
@@ -18,10 +20,12 @@
         </header>
         <!-- Formulário para cadastro de tarefas -->
         <form action="" method="get">
-            <label for="add-tarefa">Adicione sua tarefa</label>
+            <label for="add-tarefa">Adicione sua tarefa:</label>
             <div class="form-control">
                 <input type="text" name="add-tarefa" id="add-tarefa" placeholder="O que você vai fazer?">
-                <button type="submit">+</button>
+                <button type="submit">
+                    <span class="material-symbols-outlined">add</span>
+                </button>
             </div>
         </form>
         <!-- Formulário para edição de tarefas -->
@@ -29,7 +33,9 @@
             <label for="edit-tarefa">Edite sua tarefa:</label>
             <div class="form-control">
                 <input type="text" name="edit-tarefa" id="edit-tarefa">
-                <button type="submit">Check</button>
+                <button type="submit">
+                    <span class="material-symbols-outlined">done</span>
+                </button>
             </div>
             <button disabled="disabled">Canecelar</button>
         </form>
@@ -40,7 +46,9 @@
                 <label for="pesquisar">Pesquisar:</label>
                 <div>
                     <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar...">
-                    <input type="button" value="X">
+                    <button type="button">
+                        <span class="material-symbols-outlined">backspace</span>
+                    </button>
                 </div>
             </form>
             <!-- Formulário de filtro -->
@@ -58,9 +66,15 @@
         <!-- Container onde irão ficar as tarefas -->
         <div>
             <h2>Minha atividade</h2>
-            <button type="button" class="finish-to-do">Concluir</button>
-            <button type="button" class="edit-to-do">Editar</button>
-            <button type="button" class="remove-to-do">Exluir</button>
+            <button type="button" class="finish-to-do">
+                <span class="material-symbols-outlined">check</span>
+            </button>
+            <button type="button" class="edit-to-do">
+                <span class="material-symbols-outlined">edit</span>
+            </button>
+            <button type="button" class="remove-to-do">
+                <span class="material-symbols-outlined">delete</span>
+            </button>
         </div>
     </div>
 </body>
