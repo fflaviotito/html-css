@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS do projeto -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Container do conteúdo -->
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+        <!-- Formulário para cadastro de tarefas -->
+        <form action="" method="get">
+            <label for="add-tarefa">Adicione sua tarefa</label>
+            <div class="form-control">
+                <input type="text" name="add-tarefa" id="add-tarefa" placeholder="O que você vai fazer?">
+                <button type="submit">+</button>
+            </div>
+        </form>
+        <!-- Formulário para edição de tarefas -->
+        <form action="" method="get">
+            <label for="edit-tarefa">Edite sua tarefa:</label>
+            <div class="form-control">
+                <input type="text" name="edit-tarefa" id="edit-tarefa">
+                <button type="submit">Check</button>
+            </div>
+            <button disabled="disabled">Canecelar</button>
+        </form>
+        <!-- Container para as ferramentas de busca e filtro -->
+        <div>
+            <!-- Formulário de busca -->
+            <form action="" method="get">
+                <label for="pesquisar">Pesquisar:</label>
+                <div>
+                    <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar...">
+                    <input type="button" value="X">
+                </div>
+            </form>
+            <!-- Formulário de filtro -->
+            <form action="" method="get">
+                <label for="filtrar">Filtrar:</label>
+                <div>
+                    <select name="" id="">
+                        <option value="all">Todos</option>
+                        <option value="done">Feitos</option>
+                        <option value="to-do">A fazer</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <!-- Container onde irão ficar as tarefas -->
+        <div>
+            <h2>Minha atividade</h2>
+            <button type="button" class="finish-to-do">Concluir</button>
+            <button type="button" class="edit-to-do">Editar</button>
+            <button type="button" class="remove-to-do">Exluir</button>
+        </div>
+    </div>
+</body>
+</html>
