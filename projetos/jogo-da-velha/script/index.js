@@ -91,7 +91,8 @@ function fimPartida(vez) {
 document.addEventListener("click", (button) => {
     if (button.target.matches('#reload')) {
         reiniciar()
-    } else if (button.target.matches('#quit')) {
+    } 
+    if (button.target.matches('#quit')) {
         sair()
     }
 })
@@ -107,4 +108,20 @@ function reiniciar() { //REINICIAR OS PARAMETROS E O JOGO
         limparcel.classList.remove('O')
         limparcel.textContent = ""
     }
+}
+
+function sair() {
+    var playerWin = document.getElementById('player-win')
+    if (pontosX == pontosO) {
+        playerWin.innerHTML = `Os jogadores empataram!!`
+    } else if (pontosX > pontosO) {
+        playerWin.innerHTML = `O "X" foi campeão!!`
+    } else {
+        playerWin.innerHTML = `O "O" foi campeão!!`
+    }
+    var button_reaload = document.getElementById('reload')
+    button_reaload.style.display = "none"
+    var button_quit = document.getElementById('quit')
+    button_quit.style.display = "none"
+    playerWin.style.paddingBottom = "10px"
 }
