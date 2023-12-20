@@ -12,50 +12,53 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <header class="cabecalho">
+
+    </header>
     <!-- Container do conteúdo -->
-    <div class="container">
+    <main class="container">
         <!-- Cabeçalho -->
-        <header>
+        <div class="title">
             <h1>To-Do List</h1>
-        </header>
+        </div>
         <!-- Formulário para cadastro de tarefas -->
-        <form action="" method="get">
-            <label for="add-tarefa">Adicione sua tarefa:</label>
-            <div class="form-control">
-                <input type="text" name="add-tarefa" id="add-tarefa" placeholder="O que você vai fazer?">
-                <button type="submit">
+        <form action="" method="get" class="all-form add-form">
+            <label for="add-tarefa" class="label-title">Adicione sua tarefa:</label>
+            <div class="button-input">
+                <input type="text" name="add-tarefa" id="add-tarefa" placeholder="O que você vai fazer?" class="input-controls">
+                <button type="submit" class="button-icons">
                     <span class="material-symbols-outlined">add</span>
                 </button>
             </div>
         </form>
         <!-- Formulário para edição de tarefas -->
-        <form action="" method="get">
-            <label for="edit-tarefa">Edite sua tarefa:</label>
-            <div class="form-control">
-                <input type="text" name="edit-tarefa" id="edit-tarefa">
-                <button type="submit">
+        <form action="" method="get" class="all-form edit-form">
+            <label for="edit-tarefa" class="label-title">Edite sua tarefa:</label>
+            <div class="button-input">
+                <input type="text" name="edit-tarefa" id="edit-tarefa" class="input-controls">
+                <button type="submit" class="button-icons">
                     <span class="material-symbols-outlined">done</span>
                 </button>
             </div>
-            <button disabled="disabled">Canecelar</button>
+            <button type="reset" class="cancel-button">Cancelar</button>
         </form>
         <!-- Container para as ferramentas de busca e filtro -->
-        <div>
+        <div class="tools-form">
             <!-- Formulário de busca -->
-            <form action="" method="get">
-                <label for="pesquisar">Pesquisar:</label>
-                <div>
-                    <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar...">
-                    <button type="button">
+            <form action="" method="get" class="all-form search-tool">
+                <label for="pesquisar" class="label-title">Pesquisar:</label>
+                <div class="button-input">
+                    <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar..." class="input-controls input-search-tool">
+                    <button type="button" class="button-icons">
                         <span class="material-symbols-outlined">backspace</span>
                     </button>
                 </div>
             </form>
             <!-- Formulário de filtro -->
-            <form action="" method="get">
-                <label for="filtrar">Filtrar:</label>
+            <form action="" method="get" class="all-form filter-tool">
+                <label for="filtrar" class="label-title">Filtrar:</label>
                 <div>
-                    <select name="" id="">
+                    <select name="filtrar" id="filtrar" class="input-controls option-filter-tool">
                         <option value="all">Todos</option>
                         <option value="done">Feitos</option>
                         <option value="to-do">A fazer</option>
@@ -64,18 +67,30 @@
             </form>
         </div>
         <!-- Container onde irão ficar as tarefas -->
-        <div>
-            <h2>Minha atividade</h2>
-            <button type="button" class="finish-to-do">
+        <div class="list-item">
+            <h2 class="list-title">Minha atividade mais texto</h2>
+            <button type="button" class="button-icons">
                 <span class="material-symbols-outlined">check</span>
             </button>
-            <button type="button" class="edit-to-do">
+            <button type="button" class="button-icons">
                 <span class="material-symbols-outlined">edit</span>
             </button>
-            <button type="button" class="remove-to-do">
+            <button type="button" class="button-icons">
                 <span class="material-symbols-outlined">delete</span>
             </button>
         </div>
-    </div>
+        <div class="list-item">
+            <h2 class="list-title">Minha atividade</h2>
+            <button type="button" class="button-icons">
+                <span class="material-symbols-outlined">check</span>
+            </button>
+            <button type="button" class="button-icons">
+                <span class="material-symbols-outlined">edit</span>
+            </button>
+            <button type="button" class="button-icons">
+                <span class="material-symbols-outlined">delete</span>
+            </button>
+        </div>
+    </main>
 </body>
 </html>

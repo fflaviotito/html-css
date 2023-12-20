@@ -1,1 +1,164 @@
+/* Definições de acentuação e importação de font do Google */
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Configurações globais */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Variáveis */
+:root {
+    --color-text: #723880
+}
+
+/* Visualização geral da página */
+body {
+    background-color: beige;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cabecalho {
+    padding: 20px;
+}
+
+/* Organizações de posição do conteúdo na página */
+.container {
+    background-color: white;
+    width: 250px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+}
+
+/* Título da página */
+.title {
+    text-align: center;
+    font-size: 100%;
+    font-weight: 800;
+    padding: 10px 0;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+/* Fomulário para adicionar itens */
+.add-form {
+    display: block; /* Parâmetro será manipulado por JS */
+}
+
+/* Todos os formulários */
+.all-form {
+    padding: 15px;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+/* Label que são utilizadas como título */
+.label-title {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Todos input */
+.input-controls {
+    padding: 5px;
+    border: 1px solid var(--color-text);
+}
+
+/* Botões que contem icones */
+.button-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    margin-left: 10px;
+}
+
+.button-icons:hover {
+    background-color: var(--color-text);
+    color: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    transition: .5s;
+}
+
+/* Alinhamento entre botões e inputs */
+.button-input{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* Fomulário para editar itens */
+.edit-form {
+    display: none; /* Parâmetro será manipulado por JS */
+}
+
+/* Botão de cancelar */
+.cancel-button {
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.cancel-button:hover {
+    background-color: var(--color-text);
+    color: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    transition: .5s;
+}
+
+/* Container das ferramentas de pesquisa e filtro */
+.tools-form {
+    display: flex; /* Parâmetro será manipulado por JS */
+    width: 250px;
+}
+
+ /* Formulário da ferramenta de pesquisa */
+.search-tool {
+    width: 70%;
+    padding-right: 5px;
+    border-right: 2px solid #dbdbdb;
+}
+
+ /* Input da ferramenta de pesquisa */
+.input-search-tool {
+    width: 70%;
+}
+
+/* Formulário da ferramenta de busca */
+.filter-tool {
+    width: 30%;
+    padding-left: 10px;
+}
+
+/* Option da ferramenta de filtro */
+.option-filter-tool {
+    margin-top: 10px;
+    padding: 4px;
+}
+
+/* Lista (adicionados por JS) */
+.list-item {
+    display: flex; /* Parâmetro será manipulado por JS */
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    border-bottom: 2px solid #dbdbdb;
+    padding: 10px 0;
+}
+
+.list-title {
+    font-size: 16px;
+    width: 130px;
+}
