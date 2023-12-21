@@ -18,23 +18,18 @@
 /* Visualização geral da página */
 body {
     background-color: beige;
-    height: 100vh;
-    width: 100vw;
-}
-
-.cabecalho {
-    padding: 20px;
 }
 
 /* Organizações de posição do conteúdo na página */
 .container {
     background-color: white;
-    width: 250px;
+    min-width: 250px;
+    max-width: 550px;
     margin: auto;
     padding: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-
+    margin-top: 40px;
 }
 
 /* Título da página */
@@ -53,7 +48,7 @@ body {
 
 /* Todos os formulários */
 .all-form {
-    padding: 15px;
+    padding: 15px 2%;
     border-bottom: 2px solid #dbdbdb;
 }
 
@@ -68,6 +63,7 @@ body {
 .input-controls {
     padding: 5px;
     border: 1px solid var(--color-text);
+    width: 70%;
 }
 
 /* Botões que contem icones */
@@ -121,31 +117,40 @@ body {
 /* Container das ferramentas de pesquisa e filtro */
 .tools-form {
     display: flex; /* Parâmetro será manipulado por JS */
-    width: 250px;
+    min-width: 250px;
+    padding: 15px 0;
+    border-bottom: 2px solid #dbdbdb;
 }
 
  /* Formulário da ferramenta de pesquisa */
 .search-tool {
     width: 70%;
-    padding-right: 5px;
     border-right: 2px solid #dbdbdb;
+    border-bottom: none;
+    padding-right: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
  /* Input da ferramenta de pesquisa */
 .input-search-tool {
-    width: 70%;
+    width: 100%;
 }
 
 /* Formulário da ferramenta de busca */
 .filter-tool {
     width: 30%;
+    border-bottom: none;
     padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Option da ferramenta de filtro */
 .option-filter-tool {
     margin-top: 10px;
     padding: 4px;
+    width: 100%;
 }
 
 /* Lista (adicionados por JS) */
@@ -155,10 +160,10 @@ body {
     justify-content: center;
     color: var(--color-text);
     border-bottom: 2px solid #dbdbdb;
-    padding: 10px 0;
+    padding: 10px 2%;
 }
 
 .list-title {
     font-size: 16px;
-    width: 130px;
+    width: 100%;
 }
