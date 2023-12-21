@@ -86,6 +86,11 @@ body {
     transition: .5s;
 }
 
+/* Desabilitando o click nos icones */
+.material-symbols-outlined {
+    pointer-events: none;
+}
+
 /* Alinhamento entre botões e inputs */
 .button-input{
     display: flex;
