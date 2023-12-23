@@ -41,13 +41,9 @@ body {
     border-bottom: 2px solid #dbdbdb;
 }
 
-/* Fomulário para adicionar itens */
+/* Fomulário para adicionar itens a lista */
 .add-form {
     display: block; /* Parâmetro será manipulado por JS */
-}
-
-/* Todos os formulários */
-.all-form {
     padding: 15px 2%;
     border-bottom: 2px solid #dbdbdb;
 }
@@ -57,6 +53,13 @@ body {
     color: var(--color-text);
     font-weight: 700;
     font-size: 18px;
+}
+
+/* Alinhamento entre botões e inputs */
+.button-input{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
 }
 
 /* Todos input */
@@ -91,16 +94,11 @@ body {
     pointer-events: none;
 }
 
-/* Alinhamento entre botões e inputs */
-.button-input{
-    display: flex;
-    align-items: center;
-    padding-top: 10px;
-}
-
 /* Fomulário para editar itens */
 .edit-form {
     display: none; /* Parâmetro será manipulado por JS */
+    padding: 15px 2%;
+    border-bottom: 2px solid #dbdbdb;
 }
 
 /* Botão de cancelar */
@@ -132,13 +130,13 @@ body {
     width: 70%;
     border-right: 2px solid #dbdbdb;
     border-bottom: none;
-    padding-right: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 15px 2%;
 }
 
  /* Input da ferramenta de pesquisa */
 .input-search-tool {
+    padding: 5px;
+    border: 1px solid var(--color-text);
     width: 100%;
 }
 
@@ -146,16 +144,15 @@ body {
 .filter-tool {
     width: 30%;
     border-bottom: none;
-    padding-left: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 15px 2% 15px 10px;
 }
 
 /* Option da ferramenta de filtro */
 .option-filter-tool {
+    width: 100%;
     margin-top: 10px;
     padding: 4px;
-    width: 100%;
+    border: 1px solid var(--color-text);
 }
 
 /* Lista (adicionados por JS) */

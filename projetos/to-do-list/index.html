@@ -9,7 +9,7 @@
     <!-- Material Symbols da Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- JS do projeto -->
-    <script src="js/script.js" defer></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <!-- Container do conteúdo -->
@@ -21,7 +21,7 @@
         <!-- Corpo -->
         <main>
             <!-- Formulário para cadastro de tarefas -->
-            <form action="" method="get" class="all-form add-form">
+            <form action="" method="get" class="add-form">
                 <label for="add-tarefa" class="label-title">Adicione sua tarefa:</label>
                 <div class="button-input">
                     <input type="text" name="add-tarefa" placeholder="O que você vai fazer?" required class="input-controls" id="add-tarefa">
@@ -31,7 +31,7 @@
                 </div>
             </form>
             <!-- Formulário para edição de tarefas -->
-            <form action="" method="get" class="all-form edit-form">
+            <form action="" method="get" class="edit-form">
                 <label for="edit-tarefa" class="label-title">Edite sua tarefa:</label>
                 <div class="button-input">
                     <input type="text" name="edit-tarefa" id="edit-tarefa" class="input-controls">
@@ -44,20 +44,20 @@
             <!-- Container para as ferramentas de busca e filtro -->
             <div class="tools-form">
                 <!-- Formulário de busca -->
-                <form action="" method="get" class="all-form search-tool">
+                <form action="" method="get" class="search-tool">
                     <label for="pesquisar" class="label-title">Pesquisar:</label>
                     <div class="button-input">
-                        <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar..." class="input-controls input-search-tool">
+                        <input type="search" name="pesquisar" id="pesquisar" placeholder="Buscar..." class="input-search-tool">
                         <button type="button" class="button-icons" id="backspace-button">
                             <span class="material-symbols-outlined">backspace</span>
                         </button>
                     </div>
                 </form>
                 <!-- Formulário de filtro -->
-                <form action="" method="get" class="all-form filter-tool">
+                <form action="" method="get" class="filter-tool">
                     <label for="filtrar" class="label-title">Filtrar:</label>
                     <div>
-                        <select name="filtrar" id="filtrar" class="input-controls option-filter-tool">
+                        <select name="filtrar" id="filtrar" class="option-filter-tool">
                             <option value="all">Todos</option>
                             <option value="done">Feitos</option>
                             <option value="to-do">A fazer</option>
@@ -69,25 +69,25 @@
             <div id="corpo">
                 <div class="list-item">
                     <h2 class="list-title">Minha atividade mais texto</h2>
-                    <button type="button" class="button-icons" id="list-check-button">
+                    <button type="button" class="list-button-icons" id="list-check-button">
                         <span class="material-symbols-outlined">check</span>
                     </button>
-                    <button type="button" class="button-icons" id="list-edit-button">
+                    <button type="button" class="list-button-icons" id="list-edit-button">
                         <span class="material-symbols-outlined">edit</span>
                     </button>
-                    <button type="button" class="button-icons" id="list-delete-button">
+                    <button type="button" class="list-button-icons" id="list-delete-button">
                         <span class="material-symbols-outlined">delete</span>
                     </button>
                 </div>
                 <div class="list-item">
                     <h2 class="list-title">Minha atividade</h2>
-                    <button type="button" class="button-icons" id="list-check-button">
+                    <button type="button" class="list-button-icons" id="list-check-button">
                         <span class="material-symbols-outlined">check</span>
                     </button>
-                    <button type="button" class="button-icons" id="list-edit-button">
+                    <button type="button" class="list-button-icons" id="list-edit-button">
                         <span class="material-symbols-outlined">edit</span>
                     </button>
-                    <button type="button" class="button-icons" id="list-delete-button">
+                    <button type="button" class="list-button-icons" id="list-delete-button">
                         <span class="material-symbols-outlined">delete</span>
                     </button>
                 </div>
