@@ -169,17 +169,17 @@ body {
     background-color: var(--color-text);
 }
 
+.list-item-activated > h2 {
+    color: white;
+    text-decoration: line-through;
+}
+
 .list-title {
     font-size: 16px;
     width: 100%;
 }
 
-.list-title-activated {
-    color: white;
-    text-decoration: line-through;
-}
-
-.list-button-icons {
+.check, .edit, .delete {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +191,7 @@ body {
     margin-left: 10px;
 }
 
-.list-button-icons:hover {
+.check:hover, .edit:hover, .delete:hover {
     background-color: var(--color-text);
     color: #F0F0F0;
     border: 1px solid #F0F0F0;
